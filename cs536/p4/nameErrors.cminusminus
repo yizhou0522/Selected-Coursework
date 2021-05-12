@@ -1,0 +1,42 @@
+int a;
+int b;
+int c;
+bool a; //multiple declared identifier
+void d; //Non-function declared void
+struct s1{
+    int l;
+    bool l;//Multiply declared identifier
+    void m;//Non-function declared void
+};
+struct struct2{
+    int size;
+};
+
+
+void func1(){
+    d=0;//Undeclared identifier
+    a=d+1;//Undeclared identifier
+}
+int func2(){
+    struct s1 f;
+    struct s2 g;//Invalid name of struct type
+    struct s3 h;//Invalid name of struct type
+    struct s2 i;//Invalid name of struct type
+}
+void func3(){
+    struct struct2 s2;
+s2.size=1;
+s2.b=1; //Invalid struct field name
+s1.size=1;//Dot-access of nonstruct type
+s1.b=1;//Dot-access of nonstruct type
+s2.f=2;//Invalid struct field name
+s2.size.b=1;//Dot-access of nonstruct type
+}
+int func4(){
+    //struct s1 s1;
+    struct s1 s3;
+    s3.k=5; //Undeclared identifier, Dot-access of nonstruct type
+}
+
+
+

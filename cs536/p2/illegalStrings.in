@@ -1,0 +1,3 @@
+"backslash followed by space: \ is not allowed"
+"bad escaped character: \a AND not terminated
+"very bad string \

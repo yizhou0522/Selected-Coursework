@@ -1,0 +1,84 @@
+struct Point {
+    int x;
+    int y;
+};
+int f(int x, bool b) { }
+void g() {
+    int a;
+    bool b;
+    struct Point p;
+    p.x = a;
+    b = a == 3;
+    f(a + p.y*2, b);
+    g();
+}
+int testUsed;
+struct usedStruct{
+    int testUsed;
+};
+
+int testVarDecl(int p){
+    int c;
+    bool a;
+    a=c>p;
+    c=p;
+    return c;
+}
+
+struct st1{
+   int d;
+};
+struct st2{
+    struct st1 s1;
+    bool e;
+};
+void testNestedStruct(){
+    struct st1 st1;
+    struct st2 st2;
+    st1.d=2;
+    st2.s1.d=20;
+    st2.e=st2.s1.d>st1.d;
+}
+
+
+void sameName(){
+    int sameName;
+}
+struct st3{
+   int sameName;
+};
+
+struct st4{
+    int st4;
+};
+
+struct st5{
+    int usedName;
+};
+struct usedName{
+    bool usedName;
+};
+
+int used(int used){
+    return used;
+}
+
+int func(int x,bool y){
+bool b;
+bool c;
+b=true;
+c=!b;
+cin>>b;
+cout<<c;
+while(x-1 && x>3 || x<5|| x*6>=1 || 8-x<=1){ 
+        int b;
+        b=5; 
+    }
+repeat(x==4){}
+return -1;
+}
+
+
+
+
+
