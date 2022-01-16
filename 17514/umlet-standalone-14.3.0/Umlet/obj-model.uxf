@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.3.0">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>380</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1
+m1=2
+contains</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>390</x>
+      <y>610</y>
+      <w>80</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m2=1
+m1=2
+controls</panel_attributes>
+    <additional_attributes>10.0;110.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>500</x>
+      <y>240</y>
+      <w>180</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1                       1
+contains</panel_attributes>
+    <additional_attributes>160.0;20.0;10.0;20.0;20.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>220</y>
+      <w>210</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>Board
+--
+-Space[][] spaces[5][5]
+--
++getSpace(pos)
++setBuildPos()
++setMovePos()
++removePos()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>140</y>
+      <w>210</w>
+      <h>220</h>
+    </coordinates>
+    <panel_attributes>Space
+--
+-row
+-col
+-worker
+-tower
+--
++getRow()
++getTower()
++getCol()
++getWorker()
++isOccupied()
++setTower()
++setWorker(Worker w)
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>310</x>
+      <y>720</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Worker
+--
+-postion
+-height
+--
++build()
++getPosition()
++move(Space s)</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>280</x>
+      <y>140</y>
+      <w>230</w>
+      <h>250</h>
+    </coordinates>
+    <panel_attributes>Game
+--
+-isPlayer1
+-board
+-player1
+-player2
+--
++runGame()
+-build()
+-move()
+-searchValidBuild()
+-searchValidMove()
+-showResults()
++checkWin(board)
++startGame()
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>300</x>
+      <y>490</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Player
+--
+-playerName
+-List&lt;Worker&gt; workers
+--
++getName()
++getWorker(int workerIdx)
++chooseGod()
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>860</x>
+      <y>250</y>
+      <w>160</w>
+      <h>50</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=25                       
+m2=1
+contains</panel_attributes>
+    <additional_attributes>140.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1090</x>
+      <y>350</y>
+      <w>30</w>
+      <h>70</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+</panel_attributes>
+    <additional_attributes>10.0;50.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1000</x>
+      <y>400</y>
+      <w>210</w>
+      <h>150</h>
+    </coordinates>
+    <panel_attributes>Tower
+--
+-dome
+-height
+--
++getHeight()
++getWorker()
++setHeight()
++setDome()
+
+
+
+
+
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>680</x>
+      <y>720</y>
+      <w>210</w>
+      <h>130</h>
+    </coordinates>
+    <panel_attributes>Minotaur
+--
++findOpponents()
++checkBackwards(Space s)
++move(Space s)
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>520</x>
+      <y>760</y>
+      <w>170</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+extends</panel_attributes>
+    <additional_attributes>10.0;20.0;150.0;20.0</additional_attributes>
+  </element>
+</diagram>
